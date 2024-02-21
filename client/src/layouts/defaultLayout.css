@@ -1,0 +1,19 @@
+.defaultLayout {
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+}
+.son {
+    overflow-y: scroll;
+    margin-bottom: 400px;
+    min-height: 100vh;
+}
+.footerDefaultLayout {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}

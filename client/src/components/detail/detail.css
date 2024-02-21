@@ -1,0 +1,325 @@
+.detail {
+  width: 100vw;
+  padding: 200px 150px 100px 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.detail h1 {
+  font-family: "Lobster Two", sans-serif;
+  font-size: 90px;
+  color: var(--textMain);
+  margin-bottom: 100px;
+}
+.detail figure {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 50px;
+}
+.detail figure .detailImg {
+  width: 50%;
+  height: 500px;
+}
+.detail figure .detailImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+}
+.detailImgRate {
+  font-size: 20px;
+  cursor: pointer;
+  color: #000;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.detailImgRate .iconDetail {
+  color: #fadb15;
+}
+
+.detail figure figcaption {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+  height: 500px;
+}
+
+.detail figure figcaption .detailTitle {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  width: 90%;
+}
+.detail figure figcaption .detailTitle h2 {
+  font-size: 45px;
+  font-family: "Lobster Two", sans-serif;
+  color: var(--textMain);
+  width: 80%;
+}
+.detail figure figcaption .detailTitle span {
+  font-size: 25px;
+  font-weight: 700;
+  width: 20%;
+}
+.detail figure figcaption ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 90%;
+  height: 90%;
+}
+.detail figure figcaption ul li {
+  font-size: 22px;
+}
+.detail figure figcaption ul li p {
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.detail .detailActions {
+  margin-top: 50px;
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 150px;
+}
+.detail .detailActions .detailActionReview {
+  width: 50%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+.detail .detailActions .detailActionReview .detailActionWrites {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+.detail .detailActions .detailActionReview .detailActionWrites textarea {
+  resize: none;
+  border-radius: 20px;
+  padding: 20px;
+  font-size: 18px;
+  outline-color: var(--textMain);
+  width: 100%;
+  height: 120px;
+}
+.detail
+  .detailActions
+  .detailActionReview
+  .detailActionWrites
+  .detailActionWrite {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+.detail
+  .detailActions
+  .detailActionReview
+  .detailActionWrites
+  .detailActionWrite
+  button {
+  padding: 10px 40px;
+  font-size: 16px;
+  border-radius: 10px;
+  border-bottom: 1px solid #000;
+  background-color: transparent;
+  cursor: pointer;
+}
+.detail
+  .detailActions
+  .detailActionReview
+  .detailActionWrites
+  .detailActionWrite
+  button:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.detail .detailActions .detailActionAdd {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.detail .detailActions .detailActionAdd .detailActionAdds {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.detail .detailActions .detailActionAdd .detailActionAdds span {
+  cursor: pointer;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  color: #000;
+  border-radius: 50%;
+  border: 2px solid #000;
+}
+.detail .detailActions .detailActionAdd .detailActionAdds span:hover {
+  background-color: #000;
+  color: #fff;
+}
+.detail .detailActions .detailActionAdd .detailActionAdds input {
+  width: 150px;
+  height: 50px;
+  font-size: 20px;
+  text-align: center;
+  border: 2px solid #000;
+  border-radius: 20px;
+}
+
+.detail .detailActions .detailActionAdd button {
+  padding: 15px 200px;
+  border: 2px solid #000;
+  background-color: transparent;
+  color: #000;
+  font-size: 16px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.detail .detailActions .detailActionAdd button:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.detail .detailReviews {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 30px;
+  flex-wrap: wrap;
+  overflow-y: scroll;
+  max-height: 500px;
+
+
+  padding: 20px;
+}
+.detail .detailReviews .detailReview {
+  width: 23%;
+  height: 200px;
+  border: 1px solid #000;
+  border-radius: 20px;
+  padding: 20px;
+}
+.detail .detailReviews .detailReview .detailReviewInfo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 50px;
+  margin-bottom: 20px;
+}
+.detail .detailReviews .detailReview .detailReviewInfo img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.detail .detailReviews .detailReview .detailReviewInfo p {
+  flex: 1;
+  margin-left: 10px;
+  font-size: 25px;
+  font-weight: 500;
+}
+.detail .detailReviews .detailReview .detailReviewText {
+  padding: 0 20px;
+}
+.detail .detailReviews .detailReview .detailReviewText p {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+.detail .detailReviews .detailReview .detailReviewText .detailReviewAction {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  padding: 0 10px;
+}
+.detail
+  .detailReviews
+  .detailReview
+  .detailReviewText
+  .detailReviewAction
+  span {
+  font-size: 14px;
+  color: #545454;
+}
+.detail
+  .detailReviews
+  .detailReview
+  .detailReviewText
+  .detailReviewAction
+  .detailReviewDelete {
+  cursor: pointer;
+}
+.detail
+  .detailReviews
+  .detailReview
+  .detailReviewText
+  .detailReviewAction
+  .detailReviewDelete:hover {
+  transform: scale(1.2);
+  color: #000;
+}
+
+/* get point */
+.detail .getVoucherDetail {
+    margin-top: 200px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .detail .getVoucherDetail h2 {
+    font-family: "Lobster Two", sans-serif;
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  .detail .getVoucherDetail .getVoucherDetailInput {
+      height: 50px;
+      width: 500px;
+      position: relative;
+  }
+  .detail .getVoucherDetail input {
+      height: 100%;
+      width: 100%;
+      background-color: var(--backGroundMain);
+      border-radius: 30px;
+      padding: 0 20px;
+      font-size: 16px;
+  }
+  .detail .getVoucherDetail .iconDetailVoucher {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 30px;
+      cursor: pointer;
+      opacity: 0.5;
+  }
+  .detail .getVoucherDetail .iconDetailVoucher:hover {
+      opacity: 1;
+  }

@@ -1,0 +1,130 @@
+.popUpAddAdminOverlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.popUpAddAdminModal {
+  width: 500px;
+  height: 550px;
+  background-color: rgba(0, 0, 0, 0.9);
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  animation: shadow-drop-center 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+.popUpAddAdminModal .imagePopUpAddAdmin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 80px;
+}
+.popUpAddAdminModal .imagePopUpAddAdmin img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  overflow: hidden;
+}
+.popUpAddAdminModal .imagePopUpAddAdmin .notAvatar {
+  width: 200px;
+  height: 200px;
+  border: 5px solid #ffffff7c;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 120px;
+  font-weight: 900;
+  color: #fff;
+  background-color: rgba(3, 255, 200, 0.3);
+}
+.popUpAddAdminModal .imagePopUpAddAdmin .inputFile input {
+  display: none;
+}
+.popUpAddAdminModal .imagePopUpAddAdmin .inputFile label {
+  font-size: 40px;
+  cursor: pointer;
+  color: #fff;
+  transition: 0.3s;
+}
+.popUpAddAdminModal .imagePopUpAddAdmin .inputFile label:hover {
+  color: #fff;
+}
+.popUpAddAdminModal .informationPopUpAddAdmin {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-bottom: 80px;
+}
+.popUpAddAdminModal .informationPopUpAddAdmin * {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.popUpAddAdminModal .informationPopUpAddAdmin input {
+  font-size: 25px;
+  width: 100%;
+  background-color: transparent;
+  padding: 15px 10px;
+  outline: none;
+  border: 1px solid #fff;
+  border-radius: 20px;
+  color: #fff;
+}
+.popUpAddAdminModal .informationPopUpAddAdmin textarea {
+  color: #fff;
+}
+.popUpAddAdminModal .informationPopUpAddAdmin input::placeholder {
+  color: #fff;
+}
+.popUpAddAdminModal .informationPopUpAddAdmin span {
+  cursor: pointer;
+}
+.popUpAddAdminModal .informationPopUpAddAdmin .addressPopUpAddAdmin textarea {
+  padding: 5px;
+  font-size: 16px;
+  resize: none;
+  height: 60px;
+  width: 80%;
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+.popUpAddAdminModal .informationPopUpAddAdmin .addressPopUpAddAdmin textarea::placeholder {
+  color: #fff;
+  font-family: sans-serif;
+}
+.popUpAddAdminModal button {
+  width: 100%;
+  height: 50px;
+  border: 1px solid #fff;
+  background-color: transparent;
+  border-radius: 30px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 20px;
+  transition: 0.3s;
+}
+.popUpAddAdminModal button:last-child {
+  margin-top: 10px;
+}
+.popUpAddAdminModal button:hover {
+  transform: scale(1.05);
+  background-color: #fff;
+  color: #000;
+}
+@keyframes shadow-drop-center {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+  100% {
+    box-shadow: 2px 2px 20px 2px rgba(255, 255, 255, 0.35);
+  }
+}

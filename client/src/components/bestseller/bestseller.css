@@ -1,0 +1,80 @@
+.bestseller {
+  padding: 0 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+.bestseller h1 {
+  font-size: 90px;
+  font-family: "Lobster Two", sans-serif;
+  color: var(--textMain);
+}
+.bestseller .bestProducts {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 100px;
+}
+.bestseller .bestProducts figure {
+  width: 25%;
+  height: 400px;
+  overflow: hidden;
+}
+.bestseller .bestProducts figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 33% 67% 14% 86% / 65% 46% 54% 35%;
+  border: 3px solid var(--textMain);
+}
+
+.bestseller .bestProducts figure img:hover {
+  border-radius: 30px;
+  opacity: 0.7;
+}
+.bestseller .bestProducts figure figcaption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 0 20px;
+}
+.bestseller .bestProducts figure figcaption p {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 25px;
+  font-weight: 700;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+.bestseller .bestProducts figure figcaption span {
+    font-family: "Lobster Two", sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    text-align: center;
+  }
+.bestseller .bestProducts figure:hover .bestTitle {
+  animation: slide-top-bestseller 0.8s ease-out both;
+}
+.bestseller a {
+    color: var(--textMain);
+    font-size: 25px;
+    font-weight: 800;
+}
+.bestseller a:hover {
+    transform: scale(1.1);
+    color: #000;
+}
+@keyframes slide-top-bestseller {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-110%);
+            transform: translateY(-110%);
+  }
+}

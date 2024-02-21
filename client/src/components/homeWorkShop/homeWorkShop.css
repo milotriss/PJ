@@ -1,0 +1,116 @@
+.homeWorkShop {
+  padding: 150px 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 100px;
+}
+.homeWorkShop h1 {
+  font-size: 90px;
+  font-family: "Lobster Two", sans-serif;
+  color: var(--textMain);
+}
+.homeWorkShop .homeWorkShopGroup {
+  display: flex;
+  width: 100%;
+  height: 950px;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--secondary);
+  padding: 20px;
+  border-radius: 30px;
+  position: relative;
+}
+.homeWorkShop .homeWorkShopGroup::after{
+    position: absolute;
+    content: '';
+    inset: 0;
+    background-color: var(--textMain);
+    z-index: -1;
+    border-radius: 20px;
+    transform: rotate(5deg);
+}
+.homeWorkShop .homeWorkShopGroup .homeWorkShopContent {
+  width: 50%;
+  height: 100%;
+}
+.homeWorkShop .homeWorkShopGroup .homeWorkShopContent .homeWorkShopSlide {
+  width: 100%;
+  height: 100%;
+}
+.homeWorkShop .homeWorkShopGroup .homeWorkShopContent img {
+  width: 100%;
+  height: 900px;
+  object-fit: cover;
+  border-radius: 30px;
+}
+
+.homeWorkShop .homeWorkShopGroup .bookWorkShop {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.homeWorkShop .homeWorkShopGroup .bookWorkShop h1 {
+  font-size: 20px;
+  color: #474747;
+  
+}
+.homeWorkShop .homeWorkShopGroup .bookWorkShop h2 {
+  font-size: 50px;
+  font-family: "Lobster Two", sans-serif;
+}
+.homeWorkShop .homeWorkShopGroup .bookWorkShop .homeWorkShopDatePicker, .bookWorkShopItems {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.homeWorkShop .homeWorkShopGroup .bookWorkShop .bookWorkShopItems {
+  position: relative;
+}
+.homeWorkShop .homeWorkShopGroup .bookWorkShop .bookWorkShopItems input {
+  width: 100%;
+  height: 50px;
+  border: 1px solid var(--textMain);
+  border-radius: 20px;
+  padding: 0 20px;
+  font-size: 16px;
+  color: var(--textMain);
+}
+.homeWorkShop .homeWorkShopGroup .bookWorkShop .bookWorkShopItems input:not(:placeholder-shown) +  .bookWorkShopLabel,
+.homeWorkShop .homeWorkShopGroup .bookWorkShop .bookWorkShopItems input:focus +  .bookWorkShopLabel {
+  top: -20px;
+  left: 20px;
+  padding: 0 10px;
+  background-color: transparent;
+  display: inline-block;
+  transition: 0.5s ease-in-out;
+  color: var(--textMain);
+}
+.homeWorkShop .homeWorkShopGroup .bookWorkShop .bookWorkShopItems label {
+  position: absolute;
+  color: var(--primary);
+  left: 21px;
+  user-select: none;
+  pointer-events: none;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.homeWorkShop .homeWorkShopGroup .bookWorkShop button {
+  width: 50%;
+  height: 50px;
+  border: 1px solid var(--textMain);
+  border-radius: 20px;
+  cursor: pointer;
+  background-color: transparent;
+  font-size: 16px;
+}
+.homeWorkShop .homeWorkShopGroup .bookWorkShop button:hover {
+  background-color: var(--textMain);
+  color: #fff;
+}

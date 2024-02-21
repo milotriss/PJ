@@ -1,0 +1,74 @@
+/* About */
+.homeAbout {
+  padding: 150px 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 70px;
+}
+.homeAbout h1 {
+  font-size: 90px;
+  color: var(--textMain);
+  font-family: "Lobster Two", sans-serif;
+}
+.homeAbout .aboutDesc {
+  display: flex;
+  gap: 50px;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.homeAbout .aboutDesc .img {
+  width: 50%;
+  height: 400px;
+  position: relative;
+}
+.homeAbout .aboutDesc .img  img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  border: 2px solid var(--textMain);
+}
+.homeAbout .aboutDesc .img::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: var(--primary);
+  transform: rotate(5deg);
+  z-index: -1;
+  border-radius: 20px;
+  border: 2px solid var(--textMain);
+}
+.homeAbout .aboutDesc ul {
+  width: 50%;
+  font-size: 20px;
+  font-family: "Noto Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.homeAbout .aboutDesc ul li::before {
+  content: "* ";
+}
+.homeAbout .aboutInfo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  width: 100%;
+  background-color: var(--secondary);
+  border-radius: 20px;
+}
+.homeAbout .aboutInfo p {
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  font-size: 40px;
+  font-family: "Lobster Two", sans-serif;
+}
+.homeAbout .aboutInfo p span {
+  font-size: 25px;
+}

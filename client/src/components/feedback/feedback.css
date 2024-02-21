@@ -1,0 +1,138 @@
+.feedBack {
+  padding: 150px 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 100px;
+}
+.feedBack h1 {
+  font-size: 90px;
+  font-family: "Lobster Two", sans-serif;
+  color: var(--textMain);
+}
+.feedBack .cardsFeedBack {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+}
+.feedBack .cardsFeedBack .cardFeedBack {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 20px;
+  width: 400px;
+  height: 230px;
+  background-color: var(--secondary);
+  padding: 20px;
+  border-radius: 30px 30px 0 30px;
+  border: 2px solid var(--textMain);
+}
+.feedBack .cardsFeedBack .cardFeedBack .cardFeedBackTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 10px;
+}
+.feedBack .cardsFeedBack .cardFeedBack .cardFeedBackTop img {
+  width: 100px;
+  height: 100px;
+  border-radius: 30px 30px 0 30px;
+  border: 1px solid var(--textMain);
+}
+.feedBack .cardsFeedBack .cardFeedBack .cardFeedBackTop .cardFeedBackName {
+  flex: 1;
+}
+.feedBack .cardsFeedBack .cardFeedBack .cardFeedBackTop .cardFeedBackName p {
+  font-size: 20px;
+  font-weight: 600;
+}
+.feedBack .cardsFeedBack .cardFeedBack .cardFeedBackTop .iconFeedBack {
+  font-size: 30px;
+  color: var(--textMain);
+}
+.feedBack .cardsFeedBack .cardFeedBack .reviewText {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  padding-left: 30px;
+}
+
+.feedBack a {
+  font-size: 25px;
+  color: var(--textMain);
+  font-weight: 600;
+  margin-top: -40px;
+}
+
+.feedBack .reviewGroup {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  background-color: var(--backGroundMain);
+  padding: 50px;
+  border-radius: 30px;
+  position: relative;
+  border: 2px solid var(--textMain);
+}
+.feedBack .reviewGroup::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: var(--textMain);
+  transform: rotate(3deg);
+  z-index: -1;
+  border-radius: 30px;
+}
+
+.feedBack .reviewGroup .addFeedBack {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 50%;
+  height: 300px;
+}
+.feedBack .reviewGroup .addFeedBack h2 {
+  font-family: "Lobster Two", sans-serif;
+  font-size: 50px;
+  text-align: center;
+}
+.feedBack .reviewGroup .addFeedBack .iconReview {
+    color: var(--textMain);
+    font-size: 30px;
+}
+.feedBack .reviewGroup .addFeedBack textarea{
+    resize: none;
+    height: 70px;
+    width: 60%;
+    border-radius: 20px;
+    padding: 15px;
+    font-size: 18px;
+    outline: none;
+    border: 1px solid var(--textMain);
+    color: var(--textMain);
+}
+.feedBack .reviewGroup .addFeedBack button {
+    padding: 15px 0;
+    width: 60%;
+    border: 1px solid var(--textMain);
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: #fff;
+}
+.feedBack .reviewGroup .addFeedBack button:hover {
+    border: 1px solid var(--textSub);
+    background-color: transparent;
+}
+
+.feedBack .reviewGroup img {
+  width: 50%;
+  border-radius: 30px;
+}

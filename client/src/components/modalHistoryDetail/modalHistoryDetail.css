@@ -1,0 +1,81 @@
+.orderHistoryDetailOverlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+.orderHistoryDetailOverlay .orderHistoryDetail {
+    width: 80%;
+    height: 80%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #f3f3f3;
+    border-radius: 20px;
+    box-shadow: 0 0 20px 0px rgba(255, 255, 255, 0.8);
+}
+.orderHistoryDetailOverlay .orderHistoryDetail .orderHistoryDetailTitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10%;
+    padding: 0 20px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+}
+.orderHistoryDetailOverlay .orderHistoryDetail .orderHistoryDetailTitle h2 {
+    font-size: 50px;
+}
+.orderHistoryDetailOverlay .orderHistoryDetail .orderHistoryDetailTitle p {
+    font-size: 40px;
+}
+.orderHistoryDetailOverlay .orderHistoryDetail .orderHistoryDetailTitle .iconHistoryClose {
+    font-size: 40px;
+    cursor: pointer;
+    opacity: 0.2;
+    transition: 0.3s;
+}
+.orderHistoryDetailOverlay .orderHistoryDetail .orderHistoryDetailTitle .iconHistoryClose:hover {
+    opacity: 1;
+    transform: scale(1.2);
+}
+.orderHistoryDetailOverlay .orderHistoryDetail .orderHistoryDetailList {
+    height: 90%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.orderHistoryDetailOverlay .orderHistoryDetail .orderHistoryDetailList li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 50px;
+    min-height: 190px;
+    margin-bottom: 20px;
+}
+.orderHistoryDetailOverlay .orderHistoryDetail .orderHistoryDetailList li img {
+    width: 10%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+.orderHistoryDetailOverlay .orderHistoryDetail .orderHistoryDetailList li span {
+    font-size: 20px;
+    text-align: start;
+    width: 30%;
+}
+.orderHistoryDetailOverlay .orderHistoryDetail .orderHistoryDetailList li span:last-child{
+    width: 10%;
+}

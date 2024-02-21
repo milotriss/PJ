@@ -1,0 +1,221 @@
+.shop {
+  width: 100vw;
+  padding: 200px 150px 100px 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.shop h1 {
+  text-align: center;
+  font-family: "Lobster Two", sans-serif;
+  font-size: 90px;
+  color: var(--textMain);
+}
+.shop .shopGroup {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+}
+.shop .shopGroup .shopCatalogAndSearch {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 250px;
+}
+.shop .shopGroup .shopCatalogAndSearch .shopCatalog {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 70%;
+}
+.shop .shopGroup .shopCatalogAndSearch .shopCatalog li {
+  font-size: 20px;
+  color: rgb(154, 154, 154);
+  cursor: pointer;
+}
+.shop .shopGroup .shopCatalogAndSearch .shopCatalog li:hover {
+  color: #000;
+  transform: scale(1.2);
+}
+.shop .shopGroup .shopCatalogAndSearch .shopSearch {
+  width: 30%;
+}
+.shop .shopGroup .shopCatalogAndSearch .shopSearch input {
+  padding: 10px;
+  border-bottom: 1px solid #000;
+  width: 80%;
+  font-size: 18px;
+  color: #000;
+}
+.shop .shopGroup .shopItems {
+  margin-top: 50px;
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 20px;
+  max-height: 1000px;
+  overflow-y: scroll;
+}
+.shop .shopGroup .shopItems::-webkit-scrollbar {
+  display: none;
+}
+
+/* products */
+.shop .shopGroup .shopItems .shopItem {
+  width: 24%;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.shop .shopGroup .shopItems .shopItem .shopItemImg {
+  width: 100%;
+  height: 80%;
+  overflow: hidden;
+  border-radius: 60% 30px 20px 20px / 40% 30px 20px 20px;
+  transition: 0.8s;
+}
+.shop .shopGroup .shopItems .shopItem .shopItemImg:hover {
+  border-radius: 20px;
+}
+.shop .shopGroup .shopItems .shopItem .shopItemImg:hover .shopItemInfo {
+  animation: click-detail 0.6s linear both;
+}
+.shop .shopGroup .shopItems .shopItem .shopItemImg img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.shop .shopGroup .shopItems .shopItem .shopItemImg .shopItemInfo {
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  padding: 0 20px;
+}
+.shopStar {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 18px;
+  color: #fff;
+  font-weight: 700;
+}
+.shop .shopGroup .shopItems .shopItem .shopItemImg .shopItemInfo h4 {
+  font-size: 30px;
+  color: var(--textMain);
+  font-family: "Lobster Two", sans-serif;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+.shop .shopGroup .shopItems .shopItem .shopItemImg .shopItemInfo p {
+  font-size: 18px;
+  color: var(--textMain);
+  font-family: "Noto san", sans-serif;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+.shop .shopGroup .shopItems .shopItem figcaption {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+.shop .shopGroup .shopItems .shopItem figcaption p {
+  font-size: 25px;
+  font-family: "Lobster Two", sans-serif;
+  color: #000;
+  padding: 0 20px;
+}
+.shop .shopGroup .shopItems .shopItem figcaption .shopItemAction {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 20px;
+}
+.shop .shopGroup .shopItems .shopItem figcaption .shopItemAction span {
+  font-size: 18px;
+  font-weight: 600;
+}
+.shop .shopGroup .shopItems .shopItem figcaption .shopItemAction button {
+  padding: 5px 20px;
+  font-size: 18px;
+  border: 1px solid #000;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  background-color: transparent;
+}
+.shop .shopGroup .shopItems .shopItem figcaption .shopItemAction button:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+@keyframes click-detail {
+  0% {
+    transform: translateY(0) translateX(325px);
+  }
+  100% {
+    transform: translateY(-325px) translateX(0);
+  }
+}
+
+/* Voucher */
+.shop .getVoucherShop {
+  margin-top: 200px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.shop .getVoucherShop h2 {
+  font-family: "Lobster Two", sans-serif;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+.shop .getVoucherShop .getVoucherShopInput {
+    height: 50px;
+    width: 500px;
+    position: relative;
+}
+.shop .getVoucherShop input {
+    height: 100%;
+    width: 100%;
+    background-color: var(--backGroundMain);
+    border-radius: 30px;
+    padding: 0 20px;
+    font-size: 16px;
+}
+.shop .getVoucherShop .iconShopVoucher {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    opacity: 0.5;
+}
+.shop .getVoucherShop .iconShopVoucher:hover {
+    opacity: 1;
+}
+/* Active */
+.shopCatalogLi {
+  transform: scale(1.2);
+  color: #000 !important;
+}

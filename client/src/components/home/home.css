@@ -1,0 +1,183 @@
+.home {
+  width: 100vw;
+
+}
+
+/* Banner */
+.home .homeBannerHead {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.home .homeBannerHead .homeBannerHeadTitle {
+  position: absolute;
+  top: 40%;
+  padding: 0 150px;
+  z-index: 8;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+}
+.home .homeBannerHead .homeBannerHeadTitle h4 {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 40px;
+  color: #292929;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+.home .homeBannerHead .homeBannerHeadSlide {
+  width: 100%;
+  height: 100%;
+}
+.home .homeBannerHead .homeBannerHeadSlide img {
+  height: 100%;
+  object-fit: cover;
+}
+.home .homeBannerHead h1 {
+  font-family: "Lobster Two", sans-serif;
+  font-size: 90px;
+  color: #000;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+.home .homeBannerHead a {
+  padding: 20px 100px;
+  border: 3px solid #000;
+  border-radius: 30px;
+  margin-top: 20px;
+  font-size: 25px;
+  background-color: transparent;
+  color: #000;
+}
+.home .homeBannerHead a:hover {
+  transform: scale(1.09);
+  background-color: var(--textMain);
+  border: 3px solid #fff;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* Banner */
+
+/* Payment and Delivery */
+.paymentDelivery {
+  padding: 150px 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 100px;
+}
+.paymentDelivery h1 {
+  font-size: 90px;
+  font-family: "Lobster Two", sans-serif;
+  color: var(--textMain);
+}
+.paymentDelivery .contentPaymentDelivery {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 50px;
+}
+.paymentDelivery .contentPaymentDelivery .imgPaymentDelivery {
+  width: 45%;
+  height: 400px;
+  position: relative;
+}
+.paymentDelivery .contentPaymentDelivery .imgPaymentDelivery::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: var(--primary);
+  transform: rotate(5deg);
+  border-radius: 20px;
+  z-index: -1;
+  border: 2px solid var(--textMain);
+}
+.paymentDelivery .contentPaymentDelivery .imgPaymentDelivery img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  border: 2px solid var(--textMain);
+}
+.paymentDelivery .contentPaymentDelivery ul {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  list-style: inside;
+}
+.paymentDelivery .contentPaymentDelivery ul li {
+  font-size: 20px;
+  color: var(--textSub);
+}
+/* Payment and Delivery */
+
+/* Contact */
+.homeContact {
+  padding: 50px 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 100px;
+}
+.homeContact h1 {
+  font-size: 90px;
+  color: var(--textMain);
+  font-family: "Lobster Two", sans-serif;
+}
+.homeContact .contactGroup {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 100px;
+  width: 100%;
+}
+.homeContact .contactGroup .iframe {
+  width: 75%;
+  border: 2px solid var(--textMain);
+  border-radius: 20px;
+
+  position: relative;
+}
+.homeContact .contactGroup .iframe::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: 20px;
+  background-color: var(--textMain);
+  transform: rotate(5deg);
+}
+.homeContact .contactGroup .iframe iframe {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.homeContact .contactGroup .contactInfo {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 50px;
+}
+.homeContact .contactGroup .contactInfo li {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 30px;
+}
+.homeContact .contactGroup .contactInfo li .iconContact {
+  font-size: 35px;
+  color: var(--textMain);
+  position: relative;
+}
+.homeContact .contactGroup .contactInfo li p {
+  color: var(--textSub);
+  font-size: 20px;
+}
+/* Contact */

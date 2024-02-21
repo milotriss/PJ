@@ -1,0 +1,32 @@
+.orders {
+    margin: 50px auto;
+    width: 90%;
+    height: 90%;
+    background-color: #fcfcfc;
+    border-radius: 20px;
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+    padding: 30px;
+    overflow-y: scroll;
+  }
+  .orders .searchOrders {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .orders .searchOrders input {
+    width: 70%;
+    height: 100%;
+    padding: 10px;
+    border-radius: 20px;
+    outline: none;
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  .selectStatus {
+    outline: none;
+    padding: 5px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+  }

@@ -1,0 +1,82 @@
+.catalog {
+  padding: 50px 300px 0 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+.catalog h1 {
+  font-size: 60px;
+  font-family: "Lobster Two", sans-serif;
+  color: var(--textMain);
+}
+.catalog .catalogGroup {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.catalog .catalogGroup .catalogItems {
+  width: 16.6%;
+  height: 400px;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 20px;
+}
+.catalog .catalogGroup .catalogItems img {
+  border: 2px solid var(--textMain);
+  width: 100%;
+  height: 85%;
+  object-fit: cover;
+  border-radius: 50px;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+.catalog .catalogGroup .catalogItems:hover img {
+  border-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  height: 100%;
+}
+.catalog .catalogGroup .catalogItems a {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  animation: slide-bottom-catalog 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  display: none;
+}
+.catalog .catalogGroup .catalogItems a p {
+  font-family: "Lobster Two", sans-serif;
+  text-shadow: 0 0 20px 0 rgba(255, 255, 255, 0.8);
+  font-size: 40px;
+  color: var(--textMain);
+}
+.catalog .catalogGroup .catalogItems:hover a {
+  display: flex;
+}
+
+.catalog a {
+  color: var(--textMain);
+  font-size: 25px;
+  font-weight: 800;
+}
+.catalog a:hover {
+  transform: scale(1.1);
+  color: #000;
+}
+@keyframes slide-bottom-catalog {
+  0% {
+    -webkit-transform: translateY(-400px);
+    transform: translateY(-400px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}

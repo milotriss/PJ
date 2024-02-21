@@ -1,0 +1,121 @@
+.modalAddProductsOverlay {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100vw;
+    height: 100vh;
+    z-index: 9;
+}
+.modalAddProductsOverlay .modalAddProducts {
+    width: 30%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 50px;
+    border-radius: 20px;
+    box-shadow: 0 0 29px 0 rgba(0, 0, 0, 0.8);
+    gap: 20px;
+}
+
+
+.modalAddProductsOverlay .modalAddProducts .modalAddProductsImg {
+    height: 30%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+.modalAddProductsOverlay .modalAddProducts .modalAddProductsImg img {
+    height: 80%;
+    width: 100%;
+    object-fit: contain;
+    border-radius: 20px;
+}
+.modalAddProductsOverlay .modalAddProducts .modalAddProductsImg label {
+    font-size: 40px;
+    opacity: 0.3;
+    cursor: pointer;
+    transition: 0.3s;
+    display: block;
+}
+.modalAddProductsOverlay .modalAddProducts .modalAddProductsImg label:hover {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+.modalAddProductsOverlay .modalAddProducts .modalAddProductsInputs {
+    height: 45%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+}
+.modalAddProductsOverlay .modalAddProducts .modalAddProductsInputs .modalAddProductsInput {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+}
+.modalAddProductsOverlay .modalAddProducts .modalAddProductsInputs .modalAddProductsInput input {
+    padding: 15px 10px;
+    width: 100%;
+    border: 1px solid #000;
+    border-radius: 10px;
+    color: #000;
+}
+.modalAddProductsOverlay .modalAddProducts .modalAddProductsInputs .modalAddProductsInput .ruleBlur {
+    display: block;
+    font-size: 18px;
+    height: 20px;
+    color: red;
+    transition: 0.3s;
+}
+.modalAddProductsOverlay .modalAddProducts .modalAddProductsInputs .modalAddProductsInput select {
+    padding: 13px 10px;
+    width: 100%;
+    border: 1px solid #000;
+    border-radius: 10px;
+    color: #000;
+    text-align: center;
+    outline: none;
+}
+.modalAddProductsOverlay .modalAddProducts .modalAddProductsInputs .modalAddProductsInput input::placeholder{
+    color: #000;
+}
+
+
+.modalAddProductsOverlay .modalAddProducts .modalAddProductsActions {
+    height: 25%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 90px;
+}
+.modalAddProductsOverlay .modalAddProducts .modalAddProductsActions button {
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #000;
+    background-color: #fff;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.modalAddProductsOverlay .modalAddProducts .modalAddProductsActions button:hover {
+    transform: scale(1.02);
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #000;
+    border-radius: 10px;
+}

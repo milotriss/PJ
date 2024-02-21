@@ -1,0 +1,65 @@
+.notFoundLayout {
+    background-image: url("../../../public/asset/img/bgnf.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.notFoundContent {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.notFoundContent h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 300px;
+    letter-spacing: 20px;
+    color: #ececec;
+}
+.notFoundContent img {
+    width: 350px;
+    object-fit: cover;
+    animation: rotate-90-vertical-bck 10s cubic-bezier(0.250, 0.460, 0.450, 0.940) both infinite;
+}
+.notFoundContent p, .notFoundContent span{
+    font-size: 40px;
+    color: #fff;
+    font-weight: 900;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
+}
+.notFoundContent a {
+    padding: 10px 50px;
+    font-size: 30px;
+    font-weight: 700;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    cursor: pointer;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.6);
+    transition: 0.3s;
+}
+.notFoundContent a:hover {
+    transform: scale(1.09);
+    border-radius: 10px;
+    background-color: transparent;
+    color: #000;
+}
+@keyframes rotate-90-vertical-bck {
+    0% {
+      -webkit-transform: rotateY(0);
+              transform: rotateY(0);
+    }
+    100% {
+      -webkit-transform: rotateY(-360deg);
+              transform: rotateY(-360deg);
+    }
+  }

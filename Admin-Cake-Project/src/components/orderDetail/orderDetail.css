@@ -1,0 +1,81 @@
+.orderDetailOverlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+.orderDetailOverlay .orderDetail {
+    width: 80%;
+    height: 80%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #f3f3f3;
+    border-radius: 20px;
+    box-shadow: 0 0 20px 0px rgba(255, 255, 255, 0.8);
+}
+.orderDetailOverlay .orderDetail .orderDetailTitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10%;
+    padding: 0 20px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+
+}
+.orderDetailOverlay .orderDetail .orderDetailTitle h1 {
+    font-size: 50px;
+}
+.orderDetailOverlay .orderDetail .orderDetailTitle p {
+    font-size: 40px;
+}
+.orderDetailOverlay .orderDetail .orderDetailTitle .iconClose {
+    font-size: 40px;
+    cursor: pointer;
+    opacity: 0.2;
+    transition: 0.3s;
+}
+.orderDetailOverlay .orderDetail .orderDetailTitle .iconClose:hover {
+    opacity: 1;
+    transform: scale(1.2);
+}
+.orderDetailOverlay .orderDetail .orderDetailList {
+    height: 90%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.orderDetailOverlay .orderDetail .orderDetailList li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 50px;
+    min-height: 190px;
+}
+.orderDetailOverlay .orderDetail .orderDetailList li img {
+    width: 10%;
+    object-fit: cover;
+    border-radius: 20px;
+    height: 190px;
+}
+.orderDetailOverlay .orderDetail .orderDetailList li span {
+    font-size: 20px;
+    text-align: start;
+    width: 30%;
+}
+.orderDetailOverlay .orderDetail .orderDetailList li span:last-child{
+    width: 10%;
+}

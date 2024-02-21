@@ -1,0 +1,124 @@
+.footer {
+  background-color: #3d3737;
+  padding: 50px 300px 70px 300px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 700px;
+  position: relative;
+}
+.footer .footerLeft {
+  width: 50%;
+}
+.footer .footerLeft h1 {
+  font-family: "Lobster Two", sans-serif;
+  font-size: 40px;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  color: #fff;
+}
+.footer .footerLeft h1 span {
+  display: block;
+  color: rgb(255, 161, 176);
+  font-size: 60px;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  font-weight: 900;
+}
+.footer .footerLeft p {
+  width: 95%;
+  color: #fff;
+  margin: 30px 0 50px 0;
+}
+.footer .footerLeft .footerSendMail {
+  width: 300px;
+  height: 45px;
+  position: relative;
+}
+.footer .footerLeft .footerSendMail input {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  padding: 0 10px;
+  font-size: 16px;
+  color: var(--textMain);
+}
+.footer .footerLeft .footerSendMail label {
+  position: absolute;
+  top: -25px;
+  font-size: 18px;
+  color: #fff;
+  font-weight: 600;
+}
+.footer .footerLeft .footerSendMail .iconSendMail {
+  position: absolute;
+  right: -45px;
+  font-size: 40px;
+  color: var(--textMain);
+  cursor: pointer;
+}
+.footer .footerLeft .footerSendMail .iconSendMail:hover {
+  transform: scale(1.09);
+}
+
+.footer .footerRight {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 30px;
+  width: 50%;
+}
+.footer .footerRight ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+.footer .footerRight ul a {
+  font-size: 18px;
+  color: aliceblue;
+  font-weight: 300;
+}
+.footer .footerRight .footerContact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.footer .footerRight .footerContact p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  font-size: 18px;
+}
+.footer .footerRight .footerContact p .iconContactFooter {
+  color: var(--textMain);
+  font-size: 20px;
+}
+.footer .footerRight .footerContact .contactBrand {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+.footer .footerRight .footerContact .contactBrand .iconBrand {
+  font-size: 30px;
+  color: #fff;
+}
+.footer .footerRight .footerContact .contactBrand .iconBrand:hover {
+  color: var(--textMain);
+  transform: scale(1.2);
+  cursor: pointer;
+}
+.footer .copyRight {
+    position: absolute;
+    bottom: 10px;
+
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #dbd9d9;
+  font-size: 12px;
+}

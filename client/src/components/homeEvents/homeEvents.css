@@ -1,0 +1,32 @@
+.homeEvents {
+  padding: 100px 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 100px;
+}
+.homeEvents h1 {
+  color: var(--textMain);
+  font-size: 90px;
+  font-family: "Lobster Two", sans-serif;
+}
+.homeEvents img {
+    object-fit: cover;
+    border-radius: 20px;
+}
+.homeEvents .btnEvent {
+    padding: 20px 150px;
+    margin-top: -50px;
+    border: 2px solid var(--textMain);
+    border-radius: 20px;
+    font-size: 20px;
+    background-color: transparent;
+    cursor: pointer;
+}
+.homeEvents .btnEvent:hover {
+    transform: scale(1.05);
+    border: 2px solid #fff;
+    background-color: var(--textMain);
+    color: #fff;
+}

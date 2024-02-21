@@ -1,0 +1,259 @@
+.dashboard {
+  margin: 50px auto;
+  width: 90%;
+  height: 90%;
+  background-color: #fcfcfc;
+  border-radius: 20px;
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+  overflow-y:scroll ;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+}
+.dashboard h1 {
+  font-size: 45px;
+  text-align: center;
+}
+.dashboard h2 {
+  font-size: 30px;
+  margin: 10px 0 10px 35px;
+}
+.dashboard .dashboardGrid {
+  width: 100%;
+  height: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+.dashboard .dashboardGrid .dashboardItems {
+  width: 24%;
+  height: 250px;
+}
+
+.dashboard .dashboardGrid .dashboardUsers {
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+  background-color: #fff;
+  border-radius: 20px;
+  color: red;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+.dashboard .dashboardGrid .dashboardUsers .mountain {
+  width: 100%;
+  height: 50%;
+  clip-path: polygon(
+    37% 69%,
+    45% 32%,
+    60% 63%,
+    85% 12%,
+    100% 49%,
+    100% 100%,
+    0 100%,
+    0 62%,
+    14% 74%,
+    25% 49%
+  );
+  background-color: currentColor;
+  opacity: 0.8;
+}
+.dashboard .dashboardGrid .dashboardUsers::before {
+  content: "";
+  position: absolute;
+  border-radius: inherit;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: currentColor;
+  opacity: 0.2;
+}
+.dashboard .dashboardGrid .dashboardUsers .dashboardUsersInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.dashboard .dashboardGrid .dashboardRevenue {
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+  background-color: #fff;
+  border-radius: 20px;
+  color: purple;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+.dashboard .dashboardGrid .dashboardRevenue .mountain {
+  width: 100%;
+  height: 50%;
+  clip-path: polygon(
+    37% 69%,
+    45% 32%,
+    60% 63%,
+    85% 12%,
+    100% 49%,
+    100% 100%,
+    0 100%,
+    0 62%,
+    14% 74%,
+    25% 49%
+  );
+  background-color: currentColor;
+  opacity: 0.8;
+}
+.dashboard .dashboardGrid .dashboardRevenue::before {
+  content: "";
+  position: absolute;
+  border-radius: inherit;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: currentColor;
+  opacity: 0.2;
+}
+.dashboard .dashboardGrid .dashboardRevenue .dashboardRevenueInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+
+.dashboard .dashboardGrid .dashboardProducts {
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+    background-color: #fff;
+    border-radius: 20px;
+    color: blue;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+  }
+  .dashboard .dashboardGrid .dashboardProducts .mountain {
+    width: 100%;
+    height: 50%;
+    clip-path: polygon(
+      37% 69%,
+      45% 32%,
+      60% 63%,
+      85% 12%,
+      100% 49%,
+      100% 100%,
+      0 100%,
+      0 62%,
+      14% 74%,
+      25% 49%
+    );
+    background-color: currentColor;
+    opacity: 0.8;
+  }
+  .dashboard .dashboardGrid .dashboardProducts::before {
+    content: "";
+    position: absolute;
+    border-radius: inherit;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: currentColor;
+    opacity: 0.2;
+  }
+  .dashboard .dashboardGrid .dashboardProducts .dashboardProductsInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+  
+
+
+
+  .dashboard .dashboardGrid .dashboardOrders {
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+    background-color: #fff;
+    border-radius: 20px;
+    color: green;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+  }
+  .dashboard .dashboardGrid .dashboardOrders .mountain {
+    width: 100%;
+    height: 50%;
+    clip-path: polygon(
+      37% 69%,
+      45% 32%,
+      60% 63%,
+      85% 12%,
+      100% 49%,
+      100% 100%,
+      0 100%,
+      0 62%,
+      14% 74%,
+      25% 49%
+    );
+    background-color: currentColor;
+    opacity: 0.8;
+  }
+  .dashboard .dashboardGrid .dashboardOrders::before {
+    content: "";
+    position: absolute;
+    border-radius: inherit;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: currentColor;
+    opacity: 0.2;
+  }
+  .dashboard .dashboardGrid .dashboardOrders .dashboardOrdersInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+.iconDashboard {
+  font-size: 30px;
+}
+.text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.text p {
+  font-size: 25px;
+}
+.text span {
+  font-size: 20px;
+
+  font-weight: 700;
+}
+
+.dashboard .dashboardChart {
+  width: 100%;
+  height: 75%;
+  display: flex;
+  padding: 0 20px;
+  align-items: flex-start;
+  gap: 30px;
+  margin-top: 50px;
+}
+.dashboard .dashboardChart .dashboardProductsChart {
+  width: 30%;
+  height: 100%;
+}
+.dashboard .dashboardChart .dashboardRevenueChart {
+  width: 70%;
+}
