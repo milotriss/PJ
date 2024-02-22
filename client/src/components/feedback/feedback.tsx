@@ -22,12 +22,12 @@ interface IFeedback {
 }
 const Feedback = (): JSX.Element => {
   const [isLoading, setIsLoading] = useState<boolean>(true);
+  useEffect(()=>{setIsLoading(false)},[])
   const token = localStorage.getItem("token");
   const user = JSON.parse(localStorage.getItem("user") as string);
   const userId = user?.id;
   const userService = new UserService();
   const [feedBacks, setFeedbacks] = useState<IFeedback[]>([]);
-  console.log(feedBacks);
 
   const navigate = useNavigate();
   const customIcons: Record<number, React.ReactNode> = {

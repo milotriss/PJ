@@ -150,14 +150,14 @@ const Users = (): JSX.Element => {
   ];
 
   const onActive = async (id: number) => {
-    setIsLoading(true)
+    // setIsLoading(true)
     const result = await userService.active(id);
     if (result === 1) {
       dispatch(update());
-      setIsLoading(false)
+      // setIsLoading(false)
       notifySuccess("Unblock user successfully");
     } else {
-      setIsLoading(false)
+      // setIsLoading(false)
       notifyWarning("Something went wrong");
     }
   };

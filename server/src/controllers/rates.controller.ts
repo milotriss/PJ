@@ -1,13 +1,14 @@
 import express from 'express'
 import RateService from '../services/rates.service';
 import { IRate } from '../types/emtities.types';
+import { Authorization } from '../middlewares/auth.middleware';
 
 const rateController = express.Router()
 const rateService = new RateService()
 
 rateController
 // Create new Rate
-.post('/:id', async (req: express.Request, res: express.Response)=>{
+.post('/:id', Authorization, async (req: express.Request, res: express.Response)=>{
     try {
         const userId = Number(req.params.id);
         const data:IRate = {
@@ -23,7 +24,7 @@ rateController
     }
 })
 // Delete Rate
-.delete('/:id', async (req: express.Request, res:express.Response)=>{
+.delete('/:id', Authorization,async (req: express.Request, res:express.Response)=>{
     try {
         const rateId = Number(req.params.id);
         const result = await rateService.deleteRate(rateId)

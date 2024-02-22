@@ -1,4 +1,4 @@
-import { PrivateAxios, PublicAxios } from "../configs/axios.config";
+import { PrivateAxios } from "../configs/axios.config";
 
 class ApiService {
   async POST(endpoint: string, data: any) {
@@ -11,7 +11,7 @@ class ApiService {
     if (params) {
       return await PrivateAxios.get(endpoint, { params: params });
     } else {
-      return await PublicAxios.get(endpoint);
+      return await PrivateAxios.get(endpoint);
     }
   }
   async LOGOUT(endpoint: string) {
@@ -28,20 +28,20 @@ class ApiService {
   }
   async SEARCH(endpoint: string, searchValue: string, id?: number) {
     if (id) {
-      return await PublicAxios.get(`${endpoint}/${id}`, {
+      return await PrivateAxios.get(`${endpoint}/${id}`, {
         params: { search: searchValue },
       });
     } else {
-      return await PublicAxios.get(endpoint, {
+      return await PrivateAxios.get(endpoint, {
         params: { search: searchValue },
       });
     }
   }
   async CPASS(endpoint: string, password: string) {
-    return await PublicAxios.patch(endpoint, { password });
+    return await PrivateAxios.patch(endpoint, { password });
   }
   async CREATEOTP(endpoint: string, email: any) {
-    return await PublicAxios.post(endpoint, { email });
+    return await PrivateAxios.post(endpoint, { email });
   }
   async PATCH(endpoint: string, id: number, data: any) {
     return await PrivateAxios.patch(`${endpoint}/${id}`, data);

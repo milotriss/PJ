@@ -12,7 +12,7 @@ const userController = express.Router();
 const userService = new UserService();
 userController
   // GetAllUsers
-  .get("/", async (req: express.Request, res: express.Response) => {
+  .get("/",Authorization ,async (req: express.Request, res: express.Response) => {
     try {
       const data = await userService.getAllUsers();
       res.status(200).json(data);
@@ -20,7 +20,7 @@ userController
       res.status(500).json("Get all users failed: SERVER");
     }
   })
-  .get('/search',async (req: express.Request, res: express.Response) => {
+  .get('/search',Authorization,async (req: express.Request, res: express.Response) => {
     try {
       const searchValue = String(req.query.search)
       const data = await userService.searchUsers(searchValue);
@@ -45,7 +45,7 @@ userController
     }
   })
   // UpdateStatusUser ADMIN
-  .patch("/admin/:id", async (req: express.Request, res: express.Response) => {
+  .patch("/admin/:id", Authorization,async (req: express.Request, res: express.Response) => {
     try {
       const id = Number(req.params.id);
       const statusUser = Number(req.body.status);
@@ -82,7 +82,7 @@ userController
     }
   })
   // Logout
-  .get("/logout" ,async (req: express.Request, res: express.Response) => {
+  .get("/logout",Authorization ,async (req: express.Request, res: express.Response) => {
     try {
       req.session.destroy((error: any) => {
         if (error) {
@@ -180,7 +180,7 @@ userController
   })
   // UpdateUserInfo
   .patch(
-    "/:id",
+    "/:id",Authorization,
     uploadAvatar.single("avatar"),
     async (req: express.Request, res: express.Response) => {
       try {
@@ -207,7 +207,7 @@ userController
       }
     }
   )
-  .get("/history/:id", async (req: express.Request, res: express.Response) => {
+  .get("/history/:id",Authorization, async (req: express.Request, res: express.Response) => {
     try {
       const id = Number(req.params.id);
       const data = await userService.getHistoryById(id);
@@ -217,7 +217,7 @@ userController
     }
   })
   .post(
-    "/feedback/:id",
+    "/feedback/:id",Authorization,
     async (req: express.Request, res: express.Response) => {
       try {
         const data = {

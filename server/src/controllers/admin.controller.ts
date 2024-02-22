@@ -1,6 +1,7 @@
 import express from 'express';
 import AdminService from '../services/admins.service';
 import checkUserName from '../middlewares/checkUserName.middleware';
+import { Authorization } from '../middlewares/auth.middleware';
 
 const adminController = express.Router()
 const adminService = new AdminService();
@@ -37,7 +38,7 @@ adminController
       res.status(500).json("Register user failed: SERVER");
     }
   })
-.get('/', async (req: express.Request, res: express.Response)=>{
+.get('/',Authorization, async (req: express.Request, res: express.Response)=>{
     try {
         const result = await adminService.getAllAdmins()
         res.status(200).json(result)
@@ -45,7 +46,7 @@ adminController
         res.status(500).json("Get All admins: SERVER");
     }
 })
-.delete('/:id', async (req: express.Request, res: express.Response)=>{
+.delete('/:id', Authorization,async (req: express.Request, res: express.Response)=>{
     try {
         const id = Number(req.params.id);
         await adminService.deleteAdmin(id);

@@ -2,11 +2,12 @@ import express from 'express';
 import { IPayment } from '../types/emtities.types';
 import PaymentService from '../services/payment.service';
 import {v1 as uuidv1} from 'uuid'
+import { Authorization } from '../middlewares/auth.middleware';
 const paymentService = new PaymentService()
 const paymentController = express.Router();
 paymentController
 // Create New Payment
-.post('/:id', async (req:express.Request, res:express.Response) => {
+.post('/:id',Authorization, async (req:express.Request, res:express.Response) => {
     try {
         const userId = Number(req.params.id)
         const code = uuidv1()
@@ -30,7 +31,7 @@ paymentController
     }
 })
 // Update Status Payment
-.patch('/update/:id', async (req:express.Request, res:express.Response) => {
+.patch('/update/:id',Authorization, async (req:express.Request, res:express.Response) => {
     try {
         const id = Number(req.params.id);
         const status = Number(req.body.status);
@@ -45,7 +46,7 @@ paymentController
     }
 })
 // Get All Payment
-.get('/', async (req:express.Request, res:express.Response) => {
+.get('/', Authorization,async (req:express.Request, res:express.Response) => {
     try {
         const data = await paymentService.getAllPayments()
         res.status(200).json(data)
@@ -54,7 +55,7 @@ paymentController
     }
 })
 // Search Payments
-.get('/search/:id', async (req:express.Request, res:express.Response) => {
+.get('/search/:id', Authorization,async (req:express.Request, res:express.Response) => {
     try {
         const searchValue = String(req.query.search)
         const id = Number(req.params.id)

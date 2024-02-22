@@ -1,11 +1,12 @@
 import express from 'express'
 import PointService from '../services/points.service';
+import { Authorization } from '../middlewares/auth.middleware';
 const pointController = express.Router();
 const pointService = new PointService();
 
 pointController
 // Get Point By UserId
-.get('/:id',async (req:express.Request, res:express.Response)=> {
+.get('/:id',Authorization,async (req:express.Request, res:express.Response)=> {
     try {
         const userId = Number(req.params.id)
         const data = await pointService.getByUserId(userId)

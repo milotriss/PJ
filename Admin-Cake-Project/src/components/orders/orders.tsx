@@ -166,7 +166,7 @@ const Orders = (): JSX.Element => {
     id:number,
     userId:number
   ) => {
-    setIsLoading(true)
+    // setIsLoading(true)
     const result = await orderService.changeStatusOrder(
       id,
       Number(e.target.value)
@@ -174,9 +174,9 @@ const Orders = (): JSX.Element => {
       if (result === 1) {
         socket.emit('statusPayment',{userId,status:e.target.value});  
         dispatch(update());
-        setIsLoading(false)
+        // setIsLoading(false)
       }else{
-        setIsLoading(false)
+        // setIsLoading(false)
         notifyWarning("Something went wrong");
       }
   };

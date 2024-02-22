@@ -70,7 +70,7 @@ const Detail = (): JSX.Element => {
   const handleAddCart = async () => {
     setIsLoading(true);
     if (!token) {
-      setIsLoading(false)
+      setIsLoading(false);
       navigate("/");
     } else {
       const formData: ICartItem = {
@@ -102,26 +102,31 @@ const Detail = (): JSX.Element => {
     }
   };
   const handleReview = async () => {
-    setIsLoading(true)
-    if (review === "") {
-      setIsLoading(false)
-      notifyWarning("Your review is empty");
+    setIsLoading(true);
+    if (!token) {
+      setIsLoading(false);
+      navigate("/");
     } else {
-      const formRate: IRate = {
-        productId,
-        rateStar: value,
-        review: review,
-      };
-      const result = await rateService.createRate(Number(userId), formRate);
-      if (result === 1) {
-        dispatch(updateRate());
-        setReview("");
-        socket.emit("createReview", productId);
-        setIsLoading(false)
-        notifySuccess("Rate created");
+      if (review === "") {
+        setIsLoading(false);
+        notifyWarning("Your review is empty");
       } else {
-        setIsLoading(false)
-        notifyWarning("Something went wrong");
+        const formRate: IRate = {
+          productId,
+          rateStar: value,
+          review: review,
+        };
+        const result = await rateService.createRate(Number(userId), formRate);
+        if (result === 1) {
+          dispatch(updateRate());
+          setReview("");
+          socket.emit("createReview", productId);
+          setIsLoading(false);
+          notifySuccess("Rate created");
+        } else {
+          setIsLoading(false);
+          notifyWarning("Something went wrong");
+        }
       }
     }
   };
@@ -153,14 +158,14 @@ const Detail = (): JSX.Element => {
   }, [reviewData]);
   //  Delete Rate
   const handleDeleteRate = async (id: number) => {
-    setIsLoading(true)
+    setIsLoading(true);
     const result = await rateService.deleteRate(id);
     if (result === 1) {
-      setIsLoading(false)
+      setIsLoading(false);
       notifySuccess("Delete rate successfully");
       dispatch(updateRate());
     } else {
-      setIsLoading(false)
+      setIsLoading(false);
       console.log("Something went wrong");
     }
   };

@@ -27,7 +27,7 @@ orderItemController
     }
   })
   //   GetAllOrderItem
-  .get("/", async (req: express.Request, res: express.Response) => {
+  .get("/" ,async (req: express.Request, res: express.Response) => {
     try {
       const data = await orderItemService.getAllOrderItems();
       res.status(200).json(data);
@@ -35,7 +35,7 @@ orderItemController
       res.status(500).json("Get all OrderItem: SERVER");
     }
   })
-  .get('/cart/:id', async (req: express.Request, res: express.Response)=> {
+  .get('/cart/:id',Authorization, async (req: express.Request, res: express.Response)=> {
     try {
       const userId = Number(req.params.id);
       const data = await orderItemService.getDetailOrderItemByUserBefore(userId)
@@ -46,7 +46,7 @@ orderItemController
   })
   //   GetDetail with User
   .get(
-    "/history/detail/:id",
+    "/history/detail/:id",Authorization,
     async (req: express.Request, res: express.Response) => {
       try {
         const userId = Number(req.params.id);
@@ -67,7 +67,7 @@ orderItemController
   )
   //   DeleteOrderItem
   .delete(
-    "/:id",
+    "/:id",Authorization,
     checkIsPayment,
     async (req: express.Request, res: express.Response) => {
       try {
@@ -81,7 +81,7 @@ orderItemController
   )
   // Update OrderItem
   .patch(
-    "/:id",
+    "/:id",Authorization,
     checkIsPayment,
     async (req: express.Request, res: express.Response) => {
       try {

@@ -2,6 +2,7 @@ import express from 'express';
 import ProductService from '../services/products.service';
 import { uploadAvatar, uploadProducts } from '../configs/multerCloudinary.config';
 import { IProduct } from '../types/emtities.types';
+import { Authorization } from '../middlewares/auth.middleware';
 const productService = new ProductService()
 const productsController = express.Router();
 
@@ -36,7 +37,7 @@ productsController
     }
 })
 // CreateProduct
-.post('/create',uploadProducts.single('products'),async (req:express.Request, res:express.Response)=> {
+.post('/create',Authorization,uploadProducts.single('products'),async (req:express.Request, res:express.Response)=> {
     try {
         const imagePath = req.file as Express.Multer.File
         const newProduct:IProduct = {
@@ -56,7 +57,7 @@ productsController
     }
 })
 // IsDeleteProduct
-.patch('/is-delete/:id', async (req:express.Request, res:express.Response) =>{
+.patch('/is-delete/:id',Authorization, async (req:express.Request, res:express.Response) =>{
     try {
         const id = Number(req.params.id)
         const isDelete = Number(req.body.isDelete)
@@ -86,7 +87,7 @@ productsController
     }
 })
 // UpdateProduct
-.patch('/:id',uploadProducts.single('products') ,async (req:express.Request, res:express.Response)=>{
+.patch('/:id',Authorization,uploadProducts.single('products') ,async (req:express.Request, res:express.Response)=>{
     try {
         const id = Number(req.params.id)
         const imagePath = req.file as Express.Multer.File

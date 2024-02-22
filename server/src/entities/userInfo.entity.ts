@@ -14,14 +14,6 @@ const UserInfo = sequelize.define('userInfos', {
         type: DataTypes.INTEGER,
         allowNull: false
     },
-    gender: {
-        type: DataTypes.TINYINT,
-        allowNull: true
-    },
-    birthDay: {
-        type: DataTypes.DATEONLY,
-        allowNull: true
-    },
     address: {
         type: DataTypes.STRING,
         allowNull: true

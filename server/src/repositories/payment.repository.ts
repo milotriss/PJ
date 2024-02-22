@@ -26,7 +26,12 @@ class PaymentRepository {
     return await Payment.update({ status: status }, { where: { id: id } });
   }
   async getAllPayments(): Promise<any> {
-    return await Payment.findAll();
+    return await Payment.findAll({
+      order:[
+        ['status','ASC'],
+        ['createdAt','DESC'],
+      ]
+    });
   }
   async getPaymentsWithUser(userId: number, status?: number): Promise<any> {
     if (status) {

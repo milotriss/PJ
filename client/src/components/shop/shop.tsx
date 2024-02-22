@@ -20,16 +20,19 @@ const Shop = (): JSX.Element => {
   const [active, setActive] = useState<string>("All");
   const productService = new ProductService();
   const getAllProducts = async () => {
+    setIsLoading(true)
     try {
       const data = await productService.getAllProducts();
       setProducts(data.data);
+      setIsLoading(false)
     } catch (error) {
+      setIsLoading(false)
       console.log(error);
     }
   };
   useEffect(() => {
+    setIsLoading(false);
     getAllProducts();
-    setIsLoading(false)
   }, []);
   
   const handleGetProducts = async (e: MouseEvent<HTMLLIElement>) => {
