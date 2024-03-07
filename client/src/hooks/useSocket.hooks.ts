@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { io, Socket } from 'socket.io-client';
 
-const socket = io('http://localhost:9000');
+const socket = io('https://pj-ftt6.onrender.com');
 
 const useSocket = () => {
   useEffect(() => {
