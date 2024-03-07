@@ -15,7 +15,7 @@ dotenv.config();
 const server = express();
 server.use(
   cors({
-    origin: ["http://localhost:3000","http://localhost:3001"],
+    origin: ["huongbakery-seven.vercel.app","http://localhost:3001"],
     credentials: true,
     optionsSuccessStatus: 200,
   })
@@ -23,7 +23,7 @@ server.use(
 const app = http.createServer(server);
 const io = new Server(app, {
   cors: {
-      origin: ['http://localhost:3000',"http://localhost:3001"]
+      origin: ['huongbakery-seven.vercel.app',"http://localhost:3001"]
   },
 });
 io.on('connection',(socket:Socket)=>{
