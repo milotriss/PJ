@@ -56,7 +56,7 @@ server.use(
 );
 sequelize.authenticate();
 routers(server);
-// createEntity()
+createEntity()
 app.listen(port, () =>
   console.log(`http://localhost:${port} SERVER OKK FEN`)
 );
