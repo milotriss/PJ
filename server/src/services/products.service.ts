@@ -9,8 +9,8 @@ class ProductService {
     async getAllProducts(catalogId:number): Promise<IProduct[]>{
         return await this._productsRepository.getAllProducts(catalogId);
     }
-    async getAllProductsAdmin(isDelete?:number): Promise<IProduct>{
-        return await this._productsRepository.getAllProductsAdmin(isDelete);
+    async getAllProductsAdmin(sort:string,isDelete?:number): Promise<IProduct>{
+        return await this._productsRepository.getAllProductsAdmin(sort,isDelete);
     }
     async getProductById(id:number): Promise<IProduct>{
         return await this._productsRepository.getProductById(id);

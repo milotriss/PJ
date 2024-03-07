@@ -19,8 +19,9 @@ productsController
 })
 .get('/getall', async (req:express.Request, res:express.Response) => {
     try {
+        const sort = String(req.query.sort)
         const isDelete = Number(req.params.isDelete)
-        const data = await productService.getAllProductsAdmin(isDelete)
+        const data = await productService.getAllProductsAdmin(sort,isDelete)
         res.status(200).json(data)
     } catch (error) {
         res.status(500).json("Get all products: SERVER")

@@ -178,10 +178,10 @@ const Shop = (): JSX.Element => {
                     <div className="shopItemInfo">
                       <h4>Click to Detail</h4>
                       <p>{product.allergens}</p>
-                      {/* <span className="shopStar">
-                        5{" "}
-                        <FaStar style={{ color: "yellow", fontSize: "20px" }} />
-                      </span> */}
+                      {/* <span style={{ color: "yellow", fontSize: "20px" }} className="shopStar">
+                        {product.stock}
+                        {/* <FaStar style={{ color: "yellow", fontSize: "20px" }} /> */}
+                      {/* </span> */}
                     </div>
                   </Link>
                   <figcaption>

@@ -21,11 +21,12 @@ class ProductRepository {
       });
     }
   }
-  async getAllProductsAdmin(isDelete?: number): Promise<any> {
+  async getAllProductsAdmin(sort:string,isDelete?: number): Promise<any> {
     if (isDelete) {
       return await Product.findAll({
         include: [{ model: Catalog }, { model: Rate }],
         where: { isDelete: 1 },
+        order:[[sort, 'ASC']]
       });
     } else {
       return await Product.findAll({
