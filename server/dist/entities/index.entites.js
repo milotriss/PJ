@@ -1,0 +1,32 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const catalog_entity_1 = __importDefault(require("./catalog.entity"));
+const event_entity_1 = __importDefault(require("./event.entity"));
+const feedbacks_entity_1 = __importDefault(require("./feedbacks.entity"));
+const orderItems_entity_1 = __importDefault(require("./orderItems.entity"));
+const point_entity_1 = __importDefault(require("./point.entity"));
+const products_entity_1 = __importDefault(require("./products.entity"));
+const rates_entity_1 = __importDefault(require("./rates.entity"));
+const userInfo_entity_1 = __importDefault(require("./userInfo.entity"));
+const users_entity_1 = __importDefault(require("./users.entity"));
+const voucher_entity_1 = __importDefault(require("./voucher.entity"));
+const payments_entity_1 = __importDefault(require("./payments.entity"));
+const admin_entities_1 = __importDefault(require("./admin.entities"));
+const createEntity = () => {
+    users_entity_1.default.sync().then(() => console.log('Created table User'));
+    userInfo_entity_1.default.sync().then(() => console.log('Created table UserInfo'));
+    catalog_entity_1.default.sync().then(() => console.log('Created table Catalog'));
+    products_entity_1.default.sync().then(() => console.log('Created table Product'));
+    orderItems_entity_1.default.sync().then(() => console.log('Created table OrderItem'));
+    payments_entity_1.default.sync().then(() => console.log('Created table Cart'));
+    event_entity_1.default.sync().then(() => console.log('Created table Event'));
+    feedbacks_entity_1.default.sync().then(() => console.log('Created table Feedback'));
+    point_entity_1.default.sync().then(() => console.log('Created table Point'));
+    rates_entity_1.default.sync().then(() => console.log('Created table Rate'));
+    voucher_entity_1.default.sync().then(() => console.log('Created table Voucher'));
+    admin_entities_1.default.sync().then(() => console.log('Created table Admin'));
+};
+exports.default = createEntity;
