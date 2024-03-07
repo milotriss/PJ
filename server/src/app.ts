@@ -23,7 +23,7 @@ server.use(
 const app = http.createServer(server);
 const io = new Server(app, {
   cors: {
-      origin: ['huongbakery-cake.vercel.app',"http://localhost:3000"]
+      origin: ["huongbakery-cake.vercel.app","http://localhost:3000"]
   },
 });
 io.on('connection',(socket:Socket)=>{
