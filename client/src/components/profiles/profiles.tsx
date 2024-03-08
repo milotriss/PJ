@@ -11,7 +11,7 @@ import formatDate from "../../common/formatDate.common";
 import formatPrice from "../../common/formatPrice.common";
 import ModalHistoryDetail from "../modalHistoryDetail/modalHistoryDetail";
 import OrderItemService from "../../services/orderItems.service";
-// import useSocket from "../../hooks/useSocket.hooks";
+import useSocket from "../../hooks/useSocket.hooks";
 import Loading from "../loanding/loading";
 import { FaBullseye } from "react-icons/fa6";
 interface DataType {
@@ -190,7 +190,7 @@ const Profiles = (): JSX.Element => {
   const userId = user.id;
   const userService = new UserService();
   // Get history orders
-  // const socket = useSocket()
+  const socket = useSocket()
   const [history, setHistory] = useState<any[]>([]);
   const getUserInfo = async () => {
     const data = await userService.getUserInfo(Number(userId));
@@ -212,13 +212,13 @@ const Profiles = (): JSX.Element => {
       setIsLoading(false)
     }
   }, []);
-  // useEffect(()=>{
-  //   socket.on('statusHistory',(data:any)=>{
-  //     if (data.userId === userId) {
-  //       getHistory();
-  //     }
-  //   })
-  // },[socket,history])
+  useEffect(()=>{
+    socket.on('statusHistory',(data:any)=>{
+      if (data.userId === userId) {
+        getHistory();
+      }
+    })
+  },[socket,history])
   // Avatar
   const [avatars, setAvatars] = useState<any>();
   const [fileUpdate, setFile] = useState<any>();

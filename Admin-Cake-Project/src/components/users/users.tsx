@@ -11,7 +11,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { update } from "../../store/reducers/update";
 import PopUpAddAdmin from "../popUpAddAdmin/popUpAddAdmin";
 import { notifySuccess, notifyWarning } from "../../common/toastify";
-// import useSocket from "../../hooks/useSocket.hooks";
+import useSocket from "../../hooks/useSocket.hooks";
 import Loading from "../loanding/loading";
 
 interface TableParams {
@@ -22,7 +22,7 @@ interface TableParams {
 }
 
 const Users = (): JSX.Element => {
-  // const socket = useSocket()
+  const socket = useSocket()
   // console.log(socket);
   
   const [popUpAdd, setPopUpAdd] = useState<boolean>(false);
@@ -168,7 +168,7 @@ const Users = (): JSX.Element => {
       dispatch(update());
       setIsLoading(false)
       notifySuccess("Block user successfully");
-      // socket.emit("blockUser", id);
+      socket.emit("blockUser", id);
     } else {
       setIsLoading(false)
       notifyWarning("Something went wrong");

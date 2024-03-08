@@ -12,7 +12,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { update } from "../../store/reducers/update";
 import { formatDate } from "../../common/formatDate";
 import { notifySuccess, notifyWarning } from "../../common/toastify";
-// import useSocket from "../../hooks/useSocket.hooks";
+import useSocket from "../../hooks/useSocket.hooks";
 import Loading from "../loanding/loading";
 
 interface TableParams {
@@ -160,7 +160,7 @@ const Orders = (): JSX.Element => {
       width: "10%",
     },
   ];
-  // const socket = useSocket()
+  const socket = useSocket()
   const onChangeStatus = async (
     e: ChangeEvent<HTMLSelectElement>,
     id:number,
@@ -172,7 +172,7 @@ const Orders = (): JSX.Element => {
       Number(e.target.value)
     );
       if (result === 1) {
-        // socket.emit('statusPayment',{userId,status:e.target.value});  
+        socket.emit('statusPayment',{userId,status:e.target.value});  
         dispatch(update());
         // setIsLoading(false)
       }else{

@@ -23,7 +23,7 @@ import RateService from "../../services/rates.service";
 import formatDate from "../../common/formatDate.common";
 import { updateRate } from "../../store/reducers/updateRates";
 import { IoWarningOutline } from "react-icons/io5";
-// import useSocket from "../../hooks/useSocket.hooks";
+import useSocket from "../../hooks/useSocket.hooks";
 import Loading from "../loanding/loading";
 export interface ICartItem {
   userId: number;
@@ -43,7 +43,7 @@ interface IReview {
 const desc = ["terrible", "bad", "normal", "good", "wonderful"];
 const Detail = (): JSX.Element => {
   const [isLoading, setIsLoading] = useState<boolean>(true);
-  // const socket = useSocket();
+  const socket = useSocket();
   const location = useLocation();
   const navigate = useNavigate();
   const productService = new ProductService();
@@ -120,7 +120,7 @@ const Detail = (): JSX.Element => {
         if (result === 1) {
           dispatch(updateRate());
           setReview("");
-          // socket.emit("createReview", productId);
+          socket.emit("createReview", productId);
           setIsLoading(false);
           notifySuccess("Rate created");
         } else {
@@ -176,13 +176,13 @@ const Detail = (): JSX.Element => {
   const handleClose2 = () => {
     setOpen2(false);
   };
-  // useEffect(() => {
-  //   socket.on("updateReview", async (id: any) => {
-  //     if (id === productId) {
-  //       getRates();
-  //     }
-  //   });
-  // }, [socket, updateRate]);
+  useEffect(() => {
+    socket.on("updateReview", async (id: any) => {
+      if (id === productId) {
+        getRates();
+      }
+    });
+  }, [socket, updateRate]);
 
   return (
     <section className="detail">
