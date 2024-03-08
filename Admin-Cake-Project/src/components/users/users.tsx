@@ -11,7 +11,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { update } from "../../store/reducers/update";
 import PopUpAddAdmin from "../popUpAddAdmin/popUpAddAdmin";
 import { notifySuccess, notifyWarning } from "../../common/toastify";
-import useSocket from "../../hooks/useSocket.hooks";
+// import useSocket from "../../hooks/useSocket.hooks";
 import Loading from "../loanding/loading";
 
 interface TableParams {
