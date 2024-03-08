@@ -8,16 +8,10 @@ import cookieParser from "cookie-parser";
 import session from "express-session";
 import sequelize from "./configs/db.config";
 import { Server, Socket } from "socket.io";
-import http from "http";
+import https from "https";
 
 dotenv.config();
 const server = express();
-server.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', '*');
-  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
-  res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH');
-  next();
-});
 server.use(
   cors({
     origin: "https://huongbakery-cake.vercel.app",
@@ -25,7 +19,7 @@ server.use(
     optionsSuccessStatus: 200,
   })
 );
-const app = http.createServer(server);
+const app = https.createServer(server);
 const io = new Server(app, {
   cors: {
     origin: "https://huongbakery-cake.vercel.app",
