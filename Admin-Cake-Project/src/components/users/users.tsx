@@ -22,8 +22,8 @@ interface TableParams {
 }
 
 const Users = (): JSX.Element => {
-  const socket = useSocket()
-  console.log(socket);
+  // const socket = useSocket()
+  // console.log(socket);
   
   const [popUpAdd, setPopUpAdd] = useState<boolean>(false);
   const [data, setData] = useState<IUser[]>([]);
@@ -168,7 +168,7 @@ const Users = (): JSX.Element => {
       dispatch(update());
       setIsLoading(false)
       notifySuccess("Block user successfully");
-      socket.emit("blockUser", id);
+      // socket.emit("blockUser", id);
     } else {
       setIsLoading(false)
       notifyWarning("Something went wrong");

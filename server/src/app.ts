@@ -19,26 +19,26 @@ server.use(
     optionsSuccessStatus: 200,
   })
 );
-const app = https.createServer(server);
-const io = new Server(app, {
-  cors: {
-    origin: "https://huongbakery-cake.vercel.app",
-  },
-});
-io.on("connection", (socket: Socket) => {
-  console.log(socket.id, "socket id", "Client connection");
-  socket.on("blockUser", (id: number) => {
-    io.emit("logout", id);
-  });
-  socket.on("createReview", (id: number) => {
-    // console.log(id);
-    io.emit("updateReview", id);
-  });
-  socket.on("statusPayment", (data: any) => {
-    // console.log(data);
-    io.emit("statusHistory", data);
-  });
-});
+// const app = https.createServer(server);
+// const io = new Server(app, {
+//   cors: {
+//     origin: "https://huongbakery-cake.vercel.app",
+//   },
+// });
+// io.on("connection", (socket: Socket) => {
+//   console.log(socket.id, "socket id", "Client connection");
+//   socket.on("blockUser", (id: number) => {
+//     io.emit("logout", id);
+//   });
+//   socket.on("createReview", (id: number) => {
+//     // console.log(id);
+//     io.emit("updateReview", id);
+//   });
+//   socket.on("statusPayment", (data: any) => {
+//     // console.log(data);
+//     io.emit("statusHistory", data);
+//   });
+// });
 const port = process.env.PORT;
 server.use(express.static("public"));
 server.use(bodyParser.json());
@@ -55,4 +55,4 @@ server.use(
 sequelize.authenticate();
 routers(server);
 // createEntity()
-app.listen(port, () => console.log(`http://localhost:${port} SERVER OKK FEN`));
+server.listen(port, () => console.log(`http://localhost:${port} SERVER OKK FEN`));
