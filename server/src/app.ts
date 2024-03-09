@@ -14,7 +14,7 @@ dotenv.config();
 const server = express();
 server.use(
   cors({
-    origin: "https://huongbakery-cake.vercel.app/",
+    origin: "https://huongbakery-cake.vercel.app",
     credentials: true,
     optionsSuccessStatus: 200,
   })
@@ -22,7 +22,9 @@ server.use(
 const app = http.createServer(server);
 const io = new Server(app, {
   cors: {
-    origin: "https://huongbakery-cake.vercel.app/",
+    origin: "https://huongbakery-cake.vercel.app",
+    credentials: true,
+    optionsSuccessStatus: 200,
   },
 });
 io.on("connection", (socket: Socket) => {

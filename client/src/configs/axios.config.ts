@@ -1,6 +1,6 @@
 import axios from "axios";
 export const PrivateAxios = axios.create({
-  baseURL: "https://pj-ftt6.onrender.com/",
+  baseURL: "https://pj-ftt6.onrender.com",
 });
 axios.defaults.withCredentials = true;
 PrivateAxios.defaults.withCredentials = true;
@@ -30,7 +30,7 @@ PrivateAxios.interceptors.response.use(
 );
 
 export const PublicAxios = axios.create({
-  baseURL: "https://pj-ftt6.onrender.com/",
+  baseURL: "https://pj-ftt6.onrender.com",
 });
 axios.defaults.withCredentials = true;
 PublicAxios.defaults.withCredentials = true;
