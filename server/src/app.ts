@@ -15,16 +15,16 @@ const server = express();
 server.use(
   cors({
     origin: "https://huongbakery-cake.vercel.app",
-    // credentials: true,
-    // optionsSuccessStatus: 200,
+    credentials: true,
+    optionsSuccessStatus: 200,
   })
 );
 const app = http.createServer(server);
 const io = new Server(app, {
   cors: {
     origin: "https://huongbakery-cake.vercel.app",
-    // credentials: true,
-    // optionsSuccessStatus: 200,
+    credentials: true,
+    optionsSuccessStatus: 200,
   },
 });
 io.on("connection", (socket: Socket) => {
